@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasklist</title>
+    
+    <!-- Incloem jQuery i jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .task-text {
+            flex-grow: 1;
+        }
+        button {
+            margin-top: 10px;
+        }
+        .edit-btn, .delete-btn {
+            margin-left: 10px;
+        }
+        #dialog-form, #dialog-edit-form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tasklist</h1>
+
+    <!-- Llista de tasques -->
+    <ul id="tasklist">
+        <li>
+            <span class="task-text">Fer la compra</span>
+            <button class="edit-btn">edit</button>
+            <button class="delete-btn">X</button>
+        </li>
+        <li>
+            <span class="task-text">Acabar exercici tasklist</span>
+            <button class="edit-btn">edit</button>
+            <button class="delete-btn">X</button>
+        </li>
+        <li>
+            <span class="task-text">Trucar al metge</span>
+            <button class="edit-btn">edit</button>
+            <button class="delete-btn">X</button>
+        </li>
+    </ul>
+
+    <!-- Botó per afegir tasca -->
+    <button id="add-task">Afegir Tasca</button>
+
+    <!-- Diàleg modal de jQuery UI per afegir tasques -->
+    <div id="dialog-form" title="Afegir Tasca Nova">
+        <form>
+            <label for="task-name">Nom de la Tasca:</label>
+            <input type="text" id="task-name" name="task-name" value="" class="text ui-widget-content ui-corner-all">
+        </form>
+    </div>
+
+    <!-- Diàleg modal per editar tasca -->
+    <div id="dialog-edit-form" title="Editar Tasca">
+        <form>
+            <label for="edit-task-name">Nou nom de la Tasca:</label>
+            <input type="text" id="edit-task-name" name="edit-task-name" value="" class="text ui-widget-content ui-corner-all">
+        </form>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
