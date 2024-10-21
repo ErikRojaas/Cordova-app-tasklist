@@ -24,20 +24,11 @@
             padding: 10px;
             background-color: #f0f0f0;
             border: 1px solid #ccc;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .task-text {
-            flex-grow: 1;
         }
         button {
             margin-top: 10px;
         }
-        .edit-btn, .delete-btn {
-            margin-left: 10px;
-        }
-        #dialog-form, #dialog-edit-form {
+        #dialog-form {
             display: none;
         }
     </style>
@@ -48,21 +39,9 @@
 
     <!-- Llista de tasques -->
     <ul id="tasklist">
-        <li>
-            <span class="task-text">Fer la compra</span>
-            <button class="edit-btn">edit</button>
-            <button class="delete-btn">X</button>
-        </li>
-        <li>
-            <span class="task-text">Acabar exercici tasklist</span>
-            <button class="edit-btn">edit</button>
-            <button class="delete-btn">X</button>
-        </li>
-        <li>
-            <span class="task-text">Trucar al metge</span>
-            <button class="edit-btn">edit</button>
-            <button class="delete-btn">X</button>
-        </li>
+        <li>Fer la compra</li>
+        <li>Acabar exercici tasklist</li>
+        <li>Trucar al metge</li>
     </ul>
 
     <!-- Botó per afegir tasca -->
@@ -76,14 +55,7 @@
         </form>
     </div>
 
-    <!-- Diàleg modal per editar tasca -->
-    <div id="dialog-edit-form" title="Editar Tasca">
-        <form>
-            <label for="edit-task-name">Nou nom de la Tasca:</label>
-            <input type="text" id="edit-task-name" name="edit-task-name" value="" class="text ui-widget-content ui-corner-all">
-        </form>
-    </div>
-
     <script src="js/index.js"></script>
 </body>
 </html>
+
